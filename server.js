@@ -21,6 +21,11 @@ io.on("connection", (socket) => {
         console.log("User disconnected");
     });
 });
+const port = process.env.PORT || 3000; // Use Railway's dynamic port
+server.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
+
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
